@@ -25,4 +25,17 @@ First create a repository:
 	- Create an account, then create an API key (click on Create API at the top right corner when you log in to Groq).
     - To set up your Groq API key which should help you access the models, run: uv run llm keys set groq. You'll be prompted to enter your API keys. Bear in mind that you wont see the key, but when you click 'enter/return' it should work.
 
-    [Next: extract entities. You choose what groq model to use]
+## Next steps: Extract entities
+Next, we use any of the models we have access to to extract metadata. We also need a python script for this process, but we'll write a prompt in copilot asking it to generate a script that extracts our metadata.
+To give our metadata some context for a beatbook, we need to have some parts of our story included in the beatbook script. We can choose to include the entire content or just summaries.
+ Same of my requirements for the script:
+Summarize each story (keeps quotes), then extracts entities from the summary.
+	- Output: replace full story content with the summary text in the saved JSON.
+	 Default output file: stories_and_entities_new.json
+	Exclusions in metadata extraction:
+	- Do not include author/byline names.
+	- Do not include photographer names.
+	- Do not include news organization names (Star Democrat, Chesapeake Publishing, APG Media).
+	Incremental saves:
+	- The script writes the output file after each story is processed.
+[talk about rate limits]
