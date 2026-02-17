@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Create a strictly chronological beat book from stories_entities_3.json."""
+"""Create a narrative chronological beat book from stories_entities_3.json."""
 
 import argparse
 import json
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
+import re
 
 
 def parse_date(date_str):
@@ -19,10 +20,33 @@ def parse_date(date_str):
     return None
 
 
-def format_list(items, limit):
-    if not items:
-        return "None"
-    return ", ".join(items[:limit])
+def get_topic(story):
+    return story.get("llm_classification", {}).get("topic")
+
+
+def normalize_text(text):
+    if not text:
+        return ""
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def first_sentence(text, max_chars=220):
+    text = normalize_text(text)
+    if not text:
+        return ""
+    match = re.split(r"(?<=[.!?])\s+", text)
+    sentence = match[0] if match else text
+    if len(sentence) > max_chars:
+        sentence = sentence[: max_chars - 1].rstrip() + "…"
+    return sentence
+
+
+def story_blurb(story, max_chars=220):
+    content = story.get("content", "")
+    sentence = first_sentence(content, max_chars=max_chars)
+    if sentence:
+        return sentence
+    return story.get("title", "Untitled")
 
 
 def summarize_counter(items, limit):
@@ -30,60 +54,83 @@ def summarize_counter(items, limit):
     return [name for name, _ in counter.most_common(limit)]
 
 
-def format_story_entry(story, list_limit):
-    date_obj = parse_date(story.get("date", ""))
-    date_label = date_obj.isoformat() if date_obj else "Unknown date"
-    title = story.get("title", "Untitled")
-    topic = story.get("llm_classification", {}).get("topic")
+def build_month_narrative(year, month, stories, topic_limit, place_limit, story_limit):
+    month_label = datetime(year, month, 1).strftime("%B %Y")
+    topics = summarize_counter([t for s in stories if (t := get_topic(s))], topic_limit)
+    places = summarize_counter([p for s in stories for p in s.get("places", [])], place_limit)
 
-    places = summarize_counter(story.get("places", []), list_limit)
-    organizations = summarize_counter(story.get("organizations", []), list_limit)
-    people = summarize_counter(story.get("people", []), list_limit)
+    stories_sorted = sorted(
+        stories,
+        key=lambda s: parse_date(s.get("date", "")) or datetime.max.date(),
+    )
+    examples = stories_sorted[:story_limit]
 
-    lines = [f"- {date_label} — {title}\n"]
-    if topic:
-        lines.append(f"  - Topic: {topic}\n")
+    lines = [f"## {month_label}\n\n"]
+
+    if topics:
+        lines.append(f"Coverage centered on {', '.join(topics)}. ")
     if places:
-        lines.append(f"  - Places: {format_list(places, list_limit)}\n")
-    if organizations:
-        lines.append(f"  - Organizations: {format_list(organizations, list_limit)}\n")
-    if people:
-        lines.append(f"  - People: {format_list(people, list_limit)}\n")
+        lines.append(f"Locations that surfaced repeatedly included {', '.join(places)}. ")
+
+    if examples:
+        if len(examples) == 1:
+            story = examples[0]
+            lines.append(
+                f"One notable story was \"{story.get('title', 'Untitled')}\" — "
+                f"{story_blurb(story)}\n\n"
+            )
+        else:
+            fragments = []
+            for story in examples:
+                fragments.append(
+                    f"\"{story.get('title', 'Untitled')}\" ({story_blurb(story)})"
+                )
+            lines.append("Stories ranged from " + "; ".join(fragments) + ".\n\n")
+    else:
+        lines.append("No story summaries available for this month.\n\n")
+
     return "".join(lines)
 
 
-def build_chronological_sections(stories, list_limit):
-    by_month = defaultdict(list)
+def build_year_narrative(year, stories, topic_limit, place_limit, story_limit):
+    topics = summarize_counter([t for s in stories if (t := get_topic(s))], topic_limit)
+    places = summarize_counter([p for s in stories for p in s.get("places", [])], place_limit)
 
-    for story in stories:
-        date_obj = parse_date(story.get("date", ""))
-        if not date_obj:
-            key = (9999, 12)
-        else:
-            key = (date_obj.year, date_obj.month)
-        by_month[key].append(story)
+    stories_sorted = sorted(
+        stories,
+        key=lambda s: parse_date(s.get("date", "")) or datetime.max.date(),
+    )
+    examples = []
+    if stories_sorted:
+        examples.append(stories_sorted[0])
+        if len(stories_sorted) > 2:
+            examples.append(stories_sorted[len(stories_sorted) // 2])
+        if len(stories_sorted) > 1:
+            examples.append(stories_sorted[-1])
+    examples = examples[:story_limit]
 
-    sections = []
-    for (year, month) in sorted(by_month.keys()):
-        month_stories = sorted(
-            by_month[(year, month)],
-            key=lambda s: parse_date(s.get("date", "")) or datetime.max.date(),
-        )
-        if year == 9999:
-            month_label = "Unknown dates"
-        else:
-            month_label = datetime(year, month, 1).strftime("%B %Y")
-        sections.append(f"## {month_label}\n\n")
-        for story in month_stories:
-            sections.append(format_story_entry(story, list_limit))
-        sections.append("\n")
+    lines = [f"# {year}\n\n"]
+    if topics:
+        lines.append(f"This year focused heavily on {', '.join(topics)}. ")
+    if places:
+        lines.append(f"Recurring locations included {', '.join(places)}. ")
 
-    return "".join(sections)
+    if examples:
+        fragments = []
+        for story in examples:
+            fragments.append(
+                f"\"{story.get('title', 'Untitled')}\" ({story_blurb(story)})"
+            )
+        lines.append("Notable moments included " + "; ".join(fragments) + ".\n\n")
+    else:
+        lines.append("No story summaries available for this year.\n\n")
+
+    return "".join(lines)
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Create a strictly chronological beat book from stories_entities_3.json"
+        description="Create a narrative chronological beat book from stories_entities_3.json"
     )
     parser.add_argument(
         "--input",
@@ -92,14 +139,26 @@ def main():
     )
     parser.add_argument(
         "--output",
-        default="beatbook_chronological.md",
-        help="Output markdown file (default: beatbook_chronological.md)",
+        default="beatbook_narrative_chronological_v2.md",
+        help="Output markdown file (default: beatbook_narrative_chronological_v2.md)",
     )
     parser.add_argument(
-        "--list-limit",
+        "--topic-limit",
         type=int,
         default=3,
-        help="Max items per metadata list (default: 3)",
+        help="Max topics to mention per section (default: 3)",
+    )
+    parser.add_argument(
+        "--place-limit",
+        type=int,
+        default=3,
+        help="Max places to mention per section (default: 3)",
+    )
+    parser.add_argument(
+        "--story-limit",
+        type=int,
+        default=3,
+        help="Max story examples per section (default: 3)",
     )
 
     args = parser.parse_args()
@@ -113,31 +172,47 @@ def main():
 
     stories.sort(key=lambda s: parse_date(s.get("date", "")) or datetime.max.date())
 
-    date_values = [parse_date(s.get("date", "")) for s in stories if s.get("date")]
-    date_range = (min(date_values).isoformat(), max(date_values).isoformat()) if date_values else ("Unknown", "Unknown")
+    by_year = defaultdict(list)
+    by_month = defaultdict(list)
+    for story in stories:
+        date_obj = parse_date(story.get("date", ""))
+        if not date_obj:
+            continue
+        by_year[date_obj.year].append(story)
+        by_month[(date_obj.year, date_obj.month)].append(story)
 
     output = [
-        "# Beat Book: Public Safety (Chronological)\n\n",
-        f"Stories: {len(stories)}\n\n",
-        f"Date range: {date_range[0]} to {date_range[1]}\n\n",
-        "## Timeline\n\n",
-        build_chronological_sections(stories, args.list_limit),
+        "# Beat Book: Public Safety (Chronological Narrative)\n\n",
+        "This beat book walks through coverage in time order so a new reporter can see how the stories evolve.\n\n",
     ]
 
-    output_path = Path(args.output)
-    if output_path.exists():
-        stem = output_path.stem
-        suffix = output_path.suffix or ".md"
-        version = 2
-        while True:
-            candidate = output_path.with_name(f"{stem}_v{version}{suffix}")
-            if not candidate.exists():
-                output_path = candidate
-                break
-            version += 1
+    for year in sorted(by_year.keys()):
+        output.append(
+            build_year_narrative(
+                year,
+                by_year[year],
+                args.topic_limit,
+                args.place_limit,
+                args.story_limit,
+            )
+        )
 
+        months = sorted([m for m in by_month.keys() if m[0] == year])
+        for _, month in months:
+            output.append(
+                build_month_narrative(
+                    year,
+                    month,
+                    by_month[(year, month)],
+                    args.topic_limit,
+                    args.place_limit,
+                    args.story_limit,
+                )
+            )
+
+    output_path = Path(args.output)
     output_path.write_text("".join(output), encoding="utf-8")
-    print(f"Chronological beat book saved to {output_path}")
+    print(f"Chronological narrative beat book saved to {output_path}")
 
 
 if __name__ == "__main__":

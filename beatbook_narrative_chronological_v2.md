@@ -1,95 +1,124 @@
-# Beat Book: Public Safety
+# Beat Book: Public Safety (Chronological Narrative)
 
-**For: A reporter new to the beat or new to the area**
+This beat book walks through coverage in time order so a new reporter can see how the stories evolve.
 
-## Prompt Requirements
+# 2023
 
-```
-You are creating a narrative beat book for a reporter new to a public safety beat.
+This year focused heavily on Public Safety. Recurring locations included Easton, Maryland, Talbot County, Maryland, Caroline County, Maryland. Notable moments included "St. Michaels VFD places new engine into service" (St.); "Juvenile services department to move detained girls, again" (Maryland's Department of Juvenile Services (DJS) plans to relocate detained girls to the Western Maryland Children's Center, with girls in long-term committed placement to join them "at a later date." The move aims to a…); "Easton Man Gets 18 Years For Enticing Child For Sexual Activity" (U.S.).
 
-REQUIREMENTS:
-1. Target audience: Reporter new to the beat or new to the area
-2. Purpose: Help them understand:
-   - What topics dominate the beat over time
-   - Where (geographically) the beat focuses
-   - How coverage has evolved and shifted
-   - What current issues and organizations matter most
-3. Format: Narrative prose, not just lists
-4. Tone: Informative, practical, welcoming, like briefing a colleague
-5. Flow and structure (use these headings):
-   - Introduction
-   - What You're Covering
-   - Geographic Notes
-   - Who's Who
-   - Organizations to Know
-   - Closing Thought
-6. Focus on content, themes, and patterns. Do not mention bylines.
-7. Do not invent facts, people, or places not supported by the data.
-8. Flag major shifts or patterns that might surprise a newcomer
-```
+## August 2023
 
-**Generated with model:** groq/llama-3.3-70b-versatile
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Talbot County, Maryland, Easton, Maryland, Cambridge, Maryland. Stories ranged from "St. Michaels VFD places new engine into service" (St.); "Cambridge theater has another incident of smoke in theater" (Fire crews responded to the Cambridge Premier Cinema on August 9 for a report of smoke, the second incident in two weeks.); "Dispute over girlfriend led to shooting, police say - Suspect arrested in D.C. area after massive manhunt" (Stewart Orlando Ray, 37, was captured in northern Virginia after allegedly shooting Jahari De’Mon Cooper in a girlfriend-related dispute and then eluding a 24-hour manhunt across Talbot County.).
 
-## Introduction
-As you start covering the public safety beat, it's essential to understand the landscape of the topics, places, and people that dominate this area. With a dataset spanning from 2023-08-03 to 2025-10-22, we can see that public safety is the overarching theme, encompassing 300 stories. This beat book aims to provide you with a comprehensive overview of what to expect, where to focus, and who to know in this critical area of reporting.
+## September 2023
 
-## What You're Covering
-Public safety is the primary focus of this beat, with all 300 stories falling under this umbrella. This broad topic encompasses a wide range of issues, from crime and law enforcement to emergency response and community safety initiatives. As you delve into this beat, you'll find that public safety is a complex and multifaceted topic that requires a deep understanding of the local community, its concerns, and the organizations that serve it.
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Cambridge, Maryland, Dorchester County, Maryland, Federalsburg, Maryland. Stories ranged from "After The Storm" (A baby surveyed storm damage after Hurricane Idalia passed through Horseshoe Beach, Fla.); "'25 kids should not take this whole city down' - Cambridge council grapples with youth crime in city" (Lance Cephas stated that "25 kids should not take this whole city down" and emphasized the need to educate children caught in wrongdoing, saying "Because if you send them back home to that same environment, ain't nothin…); "Man dies in crash as he avoided tree" (A Federalsburg man, Steven Alan Keene Jr., was killed in a single-car crash on Smithville Road on Wednesday morning.).
 
-## Geographic Notes
-Geographically, this beat is centered in Maryland, with a particular focus on the Eastern Shore. Easton, Maryland, is the most frequently mentioned location, with 100 stories, followed closely by Talbot County, Maryland, with 84 stories. Other notable locations include Caroline County, Dorchester County, and Queen Anne's County, all of which are located on the Eastern Shore. You'll also find mentions of neighboring Delaware, as well as the city of Cambridge, Maryland. Understanding the local geography and the unique characteristics of each location will be crucial in providing nuanced and accurate reporting.
+## October 2023
 
-## Who's Who
-As you get to know the key players in this beat, you'll encounter a range of individuals who shape the public safety landscape. Some notable figures include:
-* Donnie Baker, Caroline County Sheriff
-* Amanda Leonard, Dorchester County State's Attorney
-* Joe Gamble, Talbot County Sheriff
-* Lance Richardson, Queen Anne's County State's Attorney
-* Justin Todd, Cambridge Police Chief
-These individuals, along with others, play important roles in shaping public safety policy and responding to emerging issues. Building relationships with these key figures will help you stay informed and provide valuable insights for your reporting.
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Maryland, Easton, Maryland, Talbot County, Maryland. Stories ranged from "Two arrested in shooting death at Easton bar" (Police arrested Kevron Chase, 34, of Cambridge and Chadnee Harris, 32, of Hurlock in the Sept.); "Sex offender arrested at Federalsburg school" (Roberto Ivan Zaldivar, Jr., 26, of Easton, was arrested on Oct.); "CHIEF OF POLICE POSITION TOWN OF GREENSBORO" (The Town of Greensboro is accepting applications for a Chief of Police position.).
 
-## Organizations to Know
-The organizations that operate within this beat are equally important, and you'll find that some are more prominent than others. Key organizations include:
-* Easton Police Department
-* Maryland State Police
-* Talbot County Sheriff's Office
-* Caroline County Sheriff's Office
-* Cambridge Police Department
-* Office of the State Fire Marshal
-These organizations are responsible for providing public safety services, enforcing laws, and responding to emergencies. Understanding their roles, responsibilities, and areas of focus will be essential in providing comprehensive coverage of this beat.
+## November 2023
 
-## Closing Thought
-As you begin covering the public safety beat, it's essential to remember that this is a complex and dynamic area of reporting. By understanding the dominant topics, geographic locations, key players, and organizations, you'll be well-equipped to provide informed and nuanced reporting. Keep in mind that public safety is an evolving issue, and staying up-to-date on the latest developments and shifts in the landscape will be crucial in providing accurate and timely coverage. With this foundation, you'll be ready to dive into the world of public safety reporting and provide valuable insights to your audience.
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Caroline County, Maryland, Talbot County, Maryland. Stories ranged from "'We made a big impact' - Greensboro PD's Trams promoted, Chief Paugh joins Sheriff's Office" (Greensboro Police Chief George Paugh promoted Officer Lenox Trams to lieutenant, saying "Even though it's been a short period of time in Greensboro, you definitely made an impact in the community," and "You're Mr.); "Preston man pleads guilty to attempted murder - CRIME" (Mark William Thompkins, 25, of Preston pleaded guilty to attempted second-degree murder on November 1, 2023, in connection with a February 2022 stabbing.); "School bus crash sends 11 to hospital" (Eleven people were transported to the hospital after a crash between a SUV and a Caroline County school bus on Monday morning.).
 
-## Story Examples
+## December 2023
 
-Here are a few pieces that show the range of coverage on this beat:
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Cambridge, Maryland, Dorchester County, Maryland, Easton, Maryland. Stories ranged from "Bills' Miller facing arrest for assault" (Buffalo Bills linebacker Von Miller is facing arrest for allegedly assaulting a pregnant person in Dallas.); "Bills' Miller facing arrest for assault" (According to police, a preliminary investigation of a "major disturbance" at a home on Wednesday determined that Buffalo Bills linebacker Von Miller and a pregnant victim got into a verbal argument, resulting in Miller…); "Man Arrested In Connection With Shooting, Escape At Hospital" (Israel Labastida, Jr., 19, of Glen Burnie was arrested Tuesday for allegedly shooting into a window at Eastern Shore Hospital Center on Aug.).
 
-- Easton officials weigh in on Complete Streets study, pedestrian safety (2025-10-22)
-- Kent Samaritan Group nears goal to open emergency shelter in December (2025-10-16)
-- Students warned of 'imposters' with offers of 'DoorDash-style' marijuana deliveries (2025-10-16)
+# 2024
 
-## Potential Follow-Ups
+This year focused heavily on Public Safety. Recurring locations included Easton, Maryland, Talbot County, Maryland, Maryland. Notable moments included "Kyleigh remembered - Community rallies around family of girl killed in Christmas morning fire" (Tom and Nancy Minor remembered 10-year-old Kyleigh Nicole Treadway, saying "Kyleigh was so sweet.); "Local program celebrates 10th summer of free swim lessons for kids" (SOS Sink or Swim is marking its 10th summer offering free, two-week swim sessions for kids aged 18 months to 18 years at Easton’s George Murphy Pool and St.); "Time to remove delivery boxes" (The Star Democrat has stopped hand-delivering newspapers to homes, but the bright yellow newspaper boxes remain.).
 
-*Note: This dataset may be outdated. Always check for recent updates.*
+## January 2024
 
-1. **Easton officials weigh in on Complete Streets study, pedestrian safety**
-   - Angle: Update on the Complete Streets study and its implementation
-   - Why: The story mentions concerns from Councilmember David Montgomery about prioritizing walking and biking, and it would be interesting to follow up on how the study has progressed and addressed these concerns.
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Queen Anne's County, Maryland, Maryland, Cecil County, Maryland. Stories ranged from "Kyleigh remembered - Community rallies around family of girl killed in Christmas morning fire" (Tom and Nancy Minor remembered 10-year-old Kyleigh Nicole Treadway, saying "Kyleigh was so sweet.); "Cambridge, Queen Anne's County receive MDOT grants" (Maryland Governor Wes Moore stated, "In order to create the transportation system that Marylanders deserve, we must work with our citizens, our local officials and our Congressional delegation with unity and focus to de…); "New patrolman to join EPD" (Patrolman Christopher Mueller joined the Easton Police Department after graduating from Wor-Wic Community College's Eastern Shore Criminal Justice Academy on December 18, 2023.).
 
-2. **Kent Samaritan Group nears goal to open emergency shelter in December**
-   - Angle: Update on the opening of the emergency shelter and its impact on the community
-   - Why: The story mentions a specific goal of opening the shelter in December, and a follow-up would provide an update on whether this goal was met and how the shelter is serving the community.
+## February 2024
 
-3. **Changes ripple through Caroline County law enforcement**
-   - Angle: Update on the lawsuit filed by the town's former police chief and officers
-   - Why: The story mentions a lawsuit filed by the former police chief and officers, and a follow-up would provide an update on the status of the lawsuit and any developments in the case.
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Maryland, Annapolis, Maryland, Easton, Maryland. Stories ranged from "Democratic lawmakers plan to crack down on youth crime in the coming weeks" (House Speaker Adrienne Jones stated that "Egos, political agendas and arguments over process have filled the gaps" in the current youth justice system.); "Democratic lawmakers plan to crack down on youth crime in the coming weeks" (Democratic leaders say their new youth-crime package will fix a "system" where "Egos, political operations and arguments over process have filled the" ("Egos, political agendas and arguments over process have filled the…); "Residents displaced in 2-house fire" (Leona Demdy, 87, lost many cherished belongings in a fire at her Easton home on Saturday.).
 
-4. **State Supreme Court hears arguments on police stops for cell phone use while driving**
-   - Angle: Update on the Supreme Court's decision and its impact on law enforcement
-   - Why: The story mentions a pending Supreme Court decision, and a follow-up would provide an update on the court's ruling and how it may affect police stops and law enforcement practices.
+## March 2024
 
-5. **Mother charged in killing of daughter, 3, extradited back to Maryland**
-   - Angle: Update on the trial and outcome of the case
-   - Why: The story mentions a serious crime and the extradition of the suspect, and a follow-up would provide an update on the trial and any developments in the case.
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Maryland, Baltimore County, Maryland. Stories ranged from "Following lockdown, lawmakers express worry over Capitol’s emergency alert system" (After Thursday’s two-hour lockdown, lawmakers praised first responders—Senate President Bill Ferguson noting, “Yesterday was certainly a very scary moment for many...); "Background checks needed" (Joseph Murphy agrees with the opinions in the article, "Why we cannot solve America's gun problem," stating that the recent Kansas City shooting highlights the need for a crucial conversation about gun safety.); "Rider trial postponed; bench warrant issued" (Fred "Trey" Rider III's trial for arson, malicious destruction of property, and reckless endangerment was postponed, and a bench warrant was issued after he failed to appear in court due to being admitted to Johns Hopki…).
+
+## April 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Cambridge, Maryland, Easton, Maryland, Delaware. Stories ranged from "Cambridge man charged with kidnap and murder of woman" (A Cambridge man, Kenneth Stefan Bradley, 40, has been charged with murder, kidnapping, and other crimes in connection with the disappearance and murder of 31-year-old Tiyavauna Britt.); "Denton chief disciplines officers after Administrative Charging Committee gives recommendations" (Denton Police Chief George Bacorn, Jr.); "Workshop encourages becoming an informed weather spotter" (Sarah Johnson, Warning Coordinator Meteorologist for the National Weather Service, encouraged attendees at a Kent County Public Library workshop to become informed weather spotters, stating "That's why we need you all."…).
+
+## May 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Cambridge, Maryland, Talbot County, Maryland, Hillsboro, Maryland. Stories ranged from "Hillsboro house fire results in $100K in damages" (A house fire in Hillsboro on Tuesday resulted in $100,000 in damages.); "Hillsboro house fire results in $100K in damages" (A house fire in Hillsboro on Tuesday resulted in $100,000 in damages.); "Bradford House resident wants to feel safe at home after multiple assaults" (Tena Cheaton, 59, said, “So I wanted to come,” to Bradford House when she was homeless, but soon added, “I didn’t realize it was this bad,” detailing how she was drugged and raped in her apartment, then spent weeks “thr…).
+
+## June 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Talbot County, Maryland, Eastern Shore. Stories ranged from "Local program celebrates 10th summer of free swim lessons for kids" (SOS Sink or Swim is marking its 10th summer offering free, two-week swim sessions for kids aged 18 months to 18 years at Easton’s George Murphy Pool and St.); "Minor injured in Federalsburg vehicle fire" (A minor was injured in a vehicle fire in Federalsburg on Monday at around 6:40 p.m., according to a release from the Office of the State Fire Marshal.); "Two Cambridge men charged with assault" (Marco Ray Wilkes, 42, was arrested May 30 after officers said he “strangled and struck the victim multiple times” and then “damaged the windows of the property” on Willis Street; a witness pepper-sprayed Wilkes to stop…).
+
+## July 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Talbot County, Maryland, Queen Anne's County, Maryland. Stories ranged from "Fire Marshal investigating Greensboro vehicle fire" (The Office of the State Fire Marshal is investigating an intentional vehicle fire on Kibler Road in Greensboro on Friday night.); "American Legion Post 77 donates $40,000 to local organizations and in scholarships" (Walter Black, Post 77 Judge Advocate, said of the $40,000 donation to local organizations and scholarships, "We feel very good about that." Recipient organizations were "very pleased" with the donations, according to Bl…); "Federalsburg apartment fire displaces 14" (A July 5 fire at the Federalsburg Manor Apartments displaced 14 people.).
+
+## August 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Maryland, Chester, Maryland, Queen Anne's County, Maryland. Stories ranged from "Man charged with threatening to blow up Delaware mall" (A 20-year-old man from Bear, Delaware, was charged after allegedly threatening to blow up the Christiana Mall on Saturday.); "Community block party brings resources and fun together" (A community block party was held on August 2 at the United Methodist Church in Chester, Maryland, bringing together citizens, law enforcement, and local organizations to promote police-community partnerships and neighbo…); "Debby's remnants bring flooding to the Shore" (Rescue Fire Company Chief Adam Pritchett stated, "We've gotten a report on email from Emergency Management.).
+
+## September 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Talbot County, Maryland, Easton High School. Stories ranged from "Police arrest Dorchester County man on rape, sexual assault charges" (Jason Groff, 41, of Toddville was arrested Monday morning by Cambridge Police with help from the Dorchester County Sheriff’s Office and is being held without bond.); "Cambridge man gets 25 years after taking plea deal in murder trial" (Daeveon Johnson, 19, was sentenced to 25 years in prison for the 2021 fatal shooting of Ja'Len Woolford.); "Easton police officer found guilty of misconduct" (Sgt.).
+
+## October 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Dorchester County, Maryland, Maryland. Stories ranged from "Some political signs vandalized in Talbot County" (Easton Police Capt.); "Police: Couple robbed homeless man inside his tent" (Police say that “longtime friends” Brandy Gibbs and Justin Hand stormed into a homeless man’s tent near Elkton’s West Pulaski Highway, where Gibbs demanded money and then told Hand to kill him after accusing the man of…); "Woman faces murder charge after allegedly running over man with SUV" (Simone Stewart, 50, of Lexington Park, faces a murder charge after allegedly hitting Demeatrum Scarborough, 53, with her SUV on October 7.).
+
+## November 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Easton, Maryland, Talbot County, Maryland. Stories ranged from "People can get vicious" (Catherine Nobles, writing to the Star Democrat, expressed her disappointment with the verbal and physical aggression she witnessed while working at a campaign event, stating that people can get "vicious." During her tim…); "People can get vicious" (While volunteering at the Firehouse, Catherine Nobles reports being verbally attacked and says, “You are all sick.” She and fellow supporters have been spat on, cursed, flipped off, and even had coffee thrown at them; o…); "Political vandalism reported in Easton ahead of Election Day" (Easton residents reported political sign vandalism before the 2004 election; Sandra.).
+
+## December 2024
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Talbot County, Maryland, Elkton, Maryland. Stories ranged from "Easton firefighters respond to blaze on Glebe Road" (Easton firefighters responded to a blaze on Glebe Road on Tuesday afternoon.); "11-year-old killed in hit-and-run remembered in Elkton" (“He had a bright smile.); "Mid-Shore organization pioneers a 'hub' of resources for victims of domestic violence" (Jeanne Yeager, executive director for Mid-Shore Council on Family Violence, stated that the COVID-19 pandemic accelerated the organization's adoption of technology, saying "I was really mindful of coming out of COVID...).
+
+# 2025
+
+This year focused heavily on Public Safety. Recurring locations included Easton, Maryland, Talbot County, Maryland, Maryland. Notable moments included "Talbot sheriff's office operating out of new facility" (Sheriff Joe Gamble says his staff is pleased with their new first-floor offices in the Talbot County Public Safety Complex, praising that “All the spaces are very nice.); "Federalsburg Police Department welcomes new officer" (Officer Chandler Dyott said, "Ever since I was little, I wanted to be a cop," and after high school, he joined Talbot County Corrections because "you can't be a cop until you're 21.); "Easton officials weigh in on Complete Streets study, pedestrian safety" (Councilmember David Montgomery expressed concerns that prioritizing walking and biking would sacrifice the efficient flow of vehicular traffic, stating that many older residents in his ward aren't "interested in bicycli…).
+
+## January 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Talbot County, Maryland, Dorchester County, Maryland. Stories ranged from "Talbot sheriff's office operating out of new facility" (Sheriff Joe Gamble says his staff is pleased with their new first-floor offices in the Talbot County Public Safety Complex, praising that “All the spaces are very nice.); "Counties and towns prepare for snow on the Mid-Shore this weekend" (Easton Town Engineer Rick Van Emburgh said, "Every storm is different and unique," and feels that the town is prepared for the upcoming snow.); "Icy roads, school closures continue into Thursday" (Snow has covered Eastern Shore roads since Monday, but counties believe they will be clear by Thursday.).
+
+## February 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Maryland, Easton, Maryland, Conowingo, Maryland. Stories ranged from "Maryland man gets 8 years in crossbow killing of girlfriend" (Cecil County Circuit Court Administrative Judge Brenda A.); "QA, Kent approve regional jail agreement, Caroline not yet on board" (Queen Anne’s and Kent counties have approved the final Mid-Shore Regional Detention Center agreement, while Caroline County has yet to commit.); "Bill could improve police awareness of unseen disabilities" (Del.).
+
+## March 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Talbot County, Maryland, Maryland. Stories ranged from "Common sense degrees needed" (While enjoying the company of “The Thursday Brotherhood,” the narrator recalled his great-grandfather Walter Wood, Easton’s police chief, who earned what the family called a C.S.); "UPDATE: Bay Bridge reopened to most traffic, wind restrictions in place" (The Chesapeake Bay Bridge was closed to all traffic due to gusts exceeding 55 miles per hour, but has since reopened to most traffic in both directions.); "On NTSB recommendations, FAA closes helicopter route near DC airport weeks after tragedy" (NTSB Chair Jennifer Homendy stated, "We believe a critical safety issue must be addressed without delay," following the release of urgent safety recommendations regarding helicopter flights near Ronald Reagan Washington…).
+
+## April 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Talbot County, Maryland, Dorchester County, Maryland, Queen Anne's County, Maryland. Stories ranged from "Firefighters battle blaze at auto salvage yard in Cambridge" (Firefighters responded to a third-alarm fire at Threesome Auto Salvage on Cordtown Road in Cambridge around noon on Tuesday.); "Fire, exacerbated by hoarding, rips through house killing two" (A fire on Brunswick Road in Faulkner, Maryland, killed two men, Robert Bowling, 62, and Kim Dickens, 70, on April 17.); "CASA of the Mid-Shore celebrates its volunteers" (Executive Director Robin Davenport said, "The people who bring our mission to life are our CASA volunteers." Davenport emphasized the importance of the volunteers, stating, "And that is really important to us, but certa…).
+
+## May 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Talbot County, Maryland, Easton, Maryland, United States. Stories ranged from "Kent recognizes Child Abuse Prevention Month" (Kent County officials proclaimed April 25 as Child Abuse Prevention and Child Advocacy Appreciation Month, honoring local professionals who serve more than 35 vulnerable children annually.); "Ridgley commissioners vote to continue MOU with Caroline County Sheriff's Office" (Ridgely commissioners voted unanimously to continue the town's memorandum of understanding (MOU) with the Caroline County Sheriff's Office.); "Be responsible on the water" (Here is a summary of the story in 3-6 sentences: The National Safe Boating Council is promoting safe boating practices during National Safe Boating Week (May 17-23).).
+
+## June 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Bay Bridge, Maryland. Stories ranged from "Transcript reveals final words from Dali crew before Key Bridge collapse" (Minutes before the Key Bridge collapsed, the Dali pilot casually told a tug, “I like my chances if you want to take off,” and the Bridget McAllister answered, “Alright — all done here.); "The Star Democrat's top 10 online stories this week" (The Star Democrat reported on their top 10 online stories for the week, which included Talbot and Queen Anne's counties being listed as "sanctuary jurisdictions" by the Trump administration, a label that was later dispu…); "Cambridge police investigating fatal shooting on Sunday" (Cambridge police are investigating a fatal shooting that occurred on Sunday.).
+
+## July 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Easton, Maryland, Talbot County, Maryland, Caroline County, Maryland. Stories ranged from "Delaware woman killed when falling tree hits SUV during storm" (A Delaware woman was killed and another injured when their SUV was hit by a falling tree near Wilmington during a thunderstorm on June 30.); "Officials emphasize firework safety ahead of July 4" (Master Deputy State Fire Marshal Oliver Alkire advises residents to attend public fireworks shows, but for those who still want to set off fireworks themselves, he recommends buying within their county or area, saying,…); "Greensboro contractor sentenced for felony home improvement fraud" (Jeremy Bowen, 44, was sentenced June 20 to six months in prison after pleading guilty to three counts of felony home improvement fraud for taking payments on 13 contracts—many involving pool projects for seniors—without…).
+
+## August 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Mid-Shore, Easton, Maryland, Talbot County, Maryland. Stories ranged from "Reporting when rumors spread faster than facts" (A recent uptick in U.S.); "Reporting when rumors spread faster than facts" (A recent uptick in U.S.); "2 arrested on gun charges in Days Inn incident" (Ernest Young Jr.).
+
+## September 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Caroline County, Maryland, Queen Anne's County, Maryland, Talbot County, Maryland. Stories ranged from "Ex-officers sue Ridgely, sheriff over disbanding force" (Seven former Ridgely officers claim in a federal lawsuit that Sheriff Donnie Baker and others “orchestrated a coup” to disband the town force, alleging the sheriff and ex-officer James Joles “devised a plan that would e…); "Ridgely police force saga is far from over" (The Ridgely Police Department, inactive for nearly 18 months, is still at the center of controversy in Caroline County.); "Police fatally shoot Cambridge man Thursday evening" (A Cambridge police officer fatally shot a "30-year-old Caucasian male from Cambridge" on Thursday evening after the man advanced on officers with a knife.).
+
+## October 2025
+
+Coverage centered on Public Safety. Locations that surfaced repeatedly included Baltimore, Maryland, Maryland, Easton, Maryland. Stories ranged from "County says new paramedic station in Cordova will reduce wait times for residents" (Talbot County officials broke ground on a new EMS station in Cordova to reduce ambulance wait times.); "Two arrested in separate child-abuse cases" (The Queen Anne's County Sheriff's Office announced two arrests in separate child-abuse investigations: Robert Wolfe, 59, of Stevensville, was apprehended on a Kentucky warrant for three counts of first-degree sexual abu…); "Mother charged in killing of daughter, 3, extradited back to Maryland" (Cecil County Circuit Court Judge Robert Sentman denied bail to Darrian Lynnelle Randle, 31, after Assistant State's Attorney Gavin Patashnick argued that the allegations against her were severe, stating, "The state cann…).
 
