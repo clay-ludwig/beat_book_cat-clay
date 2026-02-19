@@ -59,12 +59,11 @@ response_agencies (police, fire, EMS, multiple)
 outcome (arrest made, under investigation, resolved, ongoing)
 
 PRO TIP: When unsure about what directions to give your AI tool, ask AI!
-[Paste initial prompt to Claude?]
+[SAMPLE PROMPT: I'd like to generate metadata from articles that will help me create a beat book that looks at public safety issues thematically over time. For example, common issues that occur in the summer vs. the winter. What would the structure of that metadata need to look like?]
 
- I also included other requirements in my prompt, including: 
- that metadata be extracted from the original stories first, before they are summarized. I did this because I did not want to be limited to only the metadata found in the summaries.
+ As I examined the script AI generated, I included other requirements: 
+ 	Metadata be extracted from the original stories first, before they are summarized. I did not want to be limited to only the metadata found in the summaries.
 	- Output: replace full story content with the summary text in the saved JSON.
-	 Default output file: stories_entities_3.json (or whatever name you want your json file containing your entities to be)
 	Exclusions in metadata extraction:
 	- Do not include author/byline names.
 	- Do not include photographer names.
@@ -99,5 +98,9 @@ One other significant factor to consider when creating a beatbook is the format.
 ## Writing the beat book
 This process will largely be handled by your AI tool (preferably a commercial model?). Again, what this means is that we need a Python script to [do what?]
 To generate this, we go again to copilot and ask it to generate a script.
-Many people have limited knowledge of Python, but it is important to pay attention to this script, especially to the areas that is not code, which you can understand. Understand the sections of your script that has you prompt in it and go through them to be sure they are in line with what you [need out of your beat book]. You may ask copilot to do a break down of the script, so that you understand it better. It helps you provide directions for your script so that even when you are unsure how the code works, you have you can direct the AI throught the prompts you provide in plain language.
+Many people have limited knowledge of Python, but it is important to pay attention to this script, especially to the areas that are not code, which you can understand. Understand the sections of your script that has your prompt in it and go through them to be sure they are in line with what you [need out of your beat book]. You may ask copilot to do a break down of the script, so that you understand it better. It helps you provide directions in your script so that even when you are unsure how the code works, you can direct the AI throught the prompts you provide in plain language.
 
+uv run python generate_thematic_beatbook.py \
+  --model "groq/llama-3.3-70b-versatile" \
+  --input thematic_entities_stories.json \
+  --output my_beatbook.md
