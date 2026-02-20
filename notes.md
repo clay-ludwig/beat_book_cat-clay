@@ -101,6 +101,18 @@ To generate this, we go again to copilot and ask it to generate a script.
 Many people have limited knowledge of Python, but it is important to pay attention to this script, especially to the areas that are not code, which you can understand. Understand the sections of your script that has your prompt in it and go through them to be sure they are in line with what you [need out of your beat book]. You may ask copilot to do a break down of the script, so that you understand it better. It helps you provide directions in your script so that even when you are unsure how the code works, you can direct the AI throught the prompts you provide in plain language.
 
 uv run python generate_thematic_beatbook.py \
-  --model "groq/llama-3.3-70b-versatile" \
+  --model "anthropic/claude-3-haiku-20240307" \
   --input thematic_entities_stories.json \
-  --output my_beatbook.md
+  --output my_narrative_beatbook_v2.md
+
+
+
+
+Update add_entities_clay_v2 to script that generates a beatbook. Save to add_entities_clay_v2. Create a script that will:
+Create a narrative, reporter-friendly beatbook leveraging on pre-extracted data in thematic_entities_stories.json.
+Rely on the summaries in the document, rather than calling the the stories afresh.
+Have a business casual tone. Write like you're briefing a colleague, not writing an academic paper.
+Short, approachable introduction .
+Include potential follow up stories with a disclaimer that data may be outdated.
+MOST IMPORTANTLY, LOOKS AT PUBLIC SAFETY ISSUES THEMATICALLY OVER TIME. FOR EXAMPLE, COMMON ISSUES THAT HAPPEN IN THE SUMMER VS. WINTER. I  do not want the beat book to be strictly limited to seasons. What are trends in the story over time? Seasonal issues are only an example, and if there are seasonal trends, include them. But how has coverage of the stories and incidents in the coverage area evolved over time?
+This is what i want the focus of the beatbook to be. Update the script to reflect this.

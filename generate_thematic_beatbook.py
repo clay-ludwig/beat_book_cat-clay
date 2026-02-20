@@ -72,6 +72,72 @@ def get_story_examples(stories, theme=None, season=None, limit=3):
              'incident_type': s.get('incident_type')}
             for s in filtered[:limit]]
 
+def summary_blurb(text, max_chars=280):
+    """Return first sentence-ish summary from pre-extracted summary text."""
+    if not text:
+        return "No summary available."
+    compact = " ".join(str(text).split())
+    if not compact:
+        return "No summary available."
+    if '.' in compact:
+        candidate = compact.split('.', 1)[0].strip() + '.'
+    else:
+        candidate = compact
+    if len(candidate) > max_chars:
+        return candidate[:max_chars].rstrip() + '...'
+    return candidate
+
+def build_year_story_briefing(year, year_bucket):
+    """Build a story-driven yearly briefing using summaries and metadata."""
+    stories = year_bucket.get('stories', [])
+    if not stories:
+        return f"**{year}**\n- No story details available for this year.\n\n"
+
+    theme_groups = defaultdict(list)
+    for story in stories:
+        theme = story.get('primary_theme') or 'other'
+        theme_groups[theme].append(story)
+
+    top_themes = sorted(theme_groups.items(), key=lambda item: len(item[1]), reverse=True)[:3]
+
+    major_stories = [s for s in stories if (s.get('severity_level') or '').lower() == 'major']
+    non_major_stories = [
+        s for s in stories
+        if (s.get('severity_level') or '').lower() in ['minor', 'moderate']
+    ]
+
+    major_stories = sorted(major_stories, key=lambda s: s.get('date', ''), reverse=True)[:2]
+    non_major_stories = sorted(non_major_stories, key=lambda s: s.get('date', ''), reverse=True)[:2]
+
+    lines = [f"**{year}**"]
+    lines.append("- What coverage focused on:")
+
+    for theme, theme_stories in top_themes:
+        theme_title = theme.replace('_', ' ').title() if theme else 'Other'
+        sample_story = sorted(theme_stories, key=lambda s: s.get('date', ''), reverse=True)[0]
+        lines.append(
+            f"  - **{theme_title}:** {summary_blurb(sample_story.get('content', ''))}"
+        )
+
+    if major_stories:
+        lines.append("- Major-incident details:")
+        for story in major_stories:
+            lines.append(
+                f"  - **{story.get('title', 'Untitled')}** ({story.get('date', 'Unknown date')}): "
+                f"{summary_blurb(story.get('content', ''))}"
+            )
+
+    if non_major_stories:
+        lines.append("- Minor/moderate details:")
+        for story in non_major_stories:
+            lines.append(
+                f"  - **{story.get('title', 'Untitled')}** ({story.get('date', 'Unknown date')}): "
+                f"{summary_blurb(story.get('content', ''))}"
+            )
+
+    lines.append("")
+    return "\n".join(lines)
+
 def analyze_temporal_periods(stories):
     """Analyze patterns over time periods (by year)."""
     temporal_data = defaultdict(lambda: {
@@ -521,16 +587,13 @@ Understanding how this beat has changed over time helps you see where it's been 
 
 """
     
-    # Add year-by-year breakdown with story examples
+    # Add year-by-year story briefing (summary-driven, not count-driven)
     years = sorted(temporal_data.keys())
     if years:
-        beatbook += "\n**Coverage by Year:**\n\n"
+        beatbook += "\n## Coverage by Year: What the Stories Were Actually About\n\n"
+        beatbook += "This section is based on story summaries in the dataset, so you can see the substance of coverage year by year.\n\n"
         for year in years:
-            data = temporal_data[year]
-            top_themes_year = data['themes'].most_common(3)
-            beatbook += f"**{year}** ({data['count']} stories)\n"
-            beatbook += f"- Primary themes: {', '.join(f'{t} ({c})' for t, c in top_themes_year)}\n"
-            beatbook += f"- Severity: {', '.join(f'{s} ({c})' for s, c in data['severity'].most_common(2))}\n\n"
+            beatbook += build_year_story_briefing(year, temporal_data[year])
     
     # Trend highlights
     if trend_analysis['emerging'] or trend_analysis['declining']:
