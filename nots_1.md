@@ -61,6 +61,7 @@ uv run python metadata.py --model YOUR MODEL --input story_sample.json
 In the command above, metadata.py will be replaced with the name of the script copilot generated for you. YOUR MODEL should be replaced eith whatever AI open source model you will be using for your extraction. NOTE that is is very important to use OPEN SOURCE MODELS here, This is the part of beatbook generation that requires extra care and attention. You want to be conscious so that you are not running this prompt with a commercial model.
 NOTE also, that earlier, we installed Groq llm. If you are unsure what open source model to use, run:
 `uv run llm models`
+
 You will get results in your terminal similar to this:
 LLMGroq: groq/groq/compound-mini
 LLMGroqWhisper: groq/whisper-large-v3
@@ -82,41 +83,32 @@ One common reason why you might get an error with this process is rate limits. R
 [Image of rate limits error]
 When you run into rate limits, the metadata already extracted can be lost.
 You can fix rate limits by going again to our friend copilot and asking it to modify your script so that it saves output incrementally. So what happens here is that as your python script extracts the metadata. it saves it directly to a new document. Whenever you encounter rate limits, you can move on immediately to a new miodel. The new model continues from where the older model stopped, instead of starting afresh. So say use used this model: `groq/qwen/qwen3-32b`  and extracted 80 stories out of 500 before reaching your rate limits, you can switch to `groq/meta-llama/llama-4-scout-17b-16e-instruct` simply by interrupting the error messages you are receiving using Cntrl/Cmd + C
-The you rerun this command with your new model: `uv run python metadata.py --model ggroq/meta-llama/llama-4-scout-17b-16e-instruct --input story_sample.json`
+The you rerun this command with your new model: `uv run python metadata.py --model groq/meta-llama/llama-4-scout-17b-16e-instruct --input story_sample.json`
+Replace your model as many times as possible to complete the process, if using free open source models.
+This step is critical to the outcome of your beatbook, because [###why??]. There consider spending enough time here and not rushing through the process. You should also repeat the process if you notice that something seems off during verification.
 
-
-this process: rate limits -solve with incremental saves
-
-
-### 4) Why This Step Is Critical
-- Metadata quality strongly affects beatbook quality
-- Extract from full stories before summarization for richer signals
-- Summaries reduce token usage while preserving context
-
-### 5) Reliability Practices
-- Save output incrementally after each story
-- Handle API rate limits and interruptions
-- Process large corpora in batches
-- Resume from where processing stopped
-
-### 6) Validate Extraction in SQLite + Datasette
-- Load JSON into SQLite:
-  - `uv run sqlite-utils insert entities.db stories your_json_file_name --pk docref`
-- Install/run Datasette:
+### 4) Verification
+We are still working with llms, even if locally and one thing to always do, is verify. Now you have your metadata in a json file. You might want to go through the json file to ensure that names, organizaions, everything extracted were actually extracted from the stories you fed into the llm, rather than manufactured from thin air by your llm. A smooth way to look through your metadata is loading the json file into a simple tool: Datasette. Datasette is a tool that allows you load your unstructued data into a database and view it in structured format.[###Get_better_desc_from_Derek]
+[Image of Datasette]
+To view your metadata in Datasette, first push your metadata into the tool using this bash: 
+```bash
+uv run sqlite-utils insert entities.db stories your_json_file_name --pk docref
+```
+Next, install and serve Datasette by running the following:
   - `uv add datasette`
   - `uv run datasette entities.db`
 - Use Datasette to:
   - Inspect extraction quality
   - Check false positives/failed parses
   - Compare extracted fields against summaries and actual stories.
+Notice something off? Now is the time to repeat the metadata extraction process until metadata quality is acceptable.
 
-### 7) Iteration Loop
-- Review extracted output
-- Refine prompts/scripts
-- Re-run extraction and validation
-- Repeat until metadata quality is acceptable
+### 6) Generate the Beatbook
+This is another iterative process similar to the process for metadata extraction, only, this time, you are not really dealing with sensitive materials (your main stories data/archives) and can use commercial models for parts of this process.
+To create a beatbook out of the metadata you have, you need a second python script. And copilot can create that for us.
 
-### 8) Generate the Beatbook
+
+
 - Use a dedicated script (e.g., `generate_thematic_beatbook.py`)
 - Example run:
   - `uv run python generate_thematic_beatbook.py --model "anthropic/claude-sonnet-4-" --input thematic_entities_stories.json --output my_narrative_beatbook_v2.md`
@@ -127,4 +119,4 @@ this process: rate limits -solve with incremental saves
 - Use pre-extracted data and summaries only
 - Include follow-up story ideas + disclaimer that data may be outdated.
 
-### 10) Possible problems and how to fix them
+### 10) Expore other formats
