@@ -5,7 +5,7 @@
 - GitHub account
 - Access to a terminal/Codespace
 
-### 2) Environment Setup
+### 2) Quick Setup for Beginners
 - Create a GitHub repository
 - Open Codespace or local terminal in project folder
 - Install `uv`
@@ -14,19 +14,20 @@
 - Set API key (`uv run llm keys set groq`)
 
 ### 3) Extract Metadata First
-- Generate a Python script to extract metadata from original stories
+- Generate a Python script to extract metadata from original stories using open source models. The reason for this is: open models allow us use llms locally on our computers. So we are able to download the weights or brains of the models onto our devices and use them like we would use Word or Excel.
+(How to access their APIs?)
 - Metadata should support whatever type of beat book you intend to create.
-For a thematic-over-time beatbook
+For a thematic beatbook that looks at occurrences over time, consider the following fields:
 - Key field groups:
   - **Temporal:** names, season, year, is_weekend
   - **Content classification:** primary/secondary themes, incident type, severity
   - **Geographic:** location, location type
-  - **Contextual:** incident time, weather, agencies, outcome
+  - **Contextual:** incident time, weather, agencies, outcomes
 For a narrative beatbook
 - Key field groups:
   - **People:** names,title
   - **Places:** Maryland, Talbot, St Michael's
-- Regardless of the type, you might want to keep quotes; replace full story content with summaries in output
+- Regardless of the type, you want to keep quotes and replace full story content with summaries in output. The reason for this extraction is: we do not want to dump our data into commercial models. We want to generate metadata from our json file directly on our devices without pushing it to the internet. So our json files are not exposed, and we have summaries of our stories, which can now serve as the raw materials for our beatbook.
 - Exclude bylines, photographer names, and org names
 
 ### 4) Why This Step Is Critical

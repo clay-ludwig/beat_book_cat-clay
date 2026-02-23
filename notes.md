@@ -25,7 +25,7 @@ First create a repository:
 	- Create an account and an API key (click on Create API at the top right corner when you log in to Groq).
     - To set up your Groq API key which should help you access the models, run: uv run llm keys set groq. You'll be prompted to enter your API keys. Bear in mind that you wont see the key, but when you click 'enter/return' it should work.
 
-## Next steps: Extract entities
+## Next steps: Extract Metadata
 Now that we are all set up, our next step is to begin gathering/extracting entities: metadata from the stories we have. One reason for extracting entities is that it influences how our beatbooks turn out. A chronological beat book for instance may not turn out well if this the format is not taken into consideration at this stage [Explain further, do not oversimpify.]
 We can use any of the models we have access to to extract metadata. We also need a python script for this process, but since many people are not versed in Python, we'll turn to copilot to generate a script that extracts our metadata.
 Although the beatbook is the main product, this is a particularly important step. It can make or mar the product [talk a little more about this]
