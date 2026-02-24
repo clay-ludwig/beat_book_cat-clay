@@ -37,7 +37,7 @@ Now you are ready to use open source models on your local computers.
 (How to access their APIs?)
 To extract metadata, we will need a python script, and this is where our friend copilot comes in. Go into the copilot chat box and craft a prompt asking it to generate a Python script that extracts metadata from your original json file. Your prompt must be detailed, and put into perspective the kind of beatbook you'd like to create.
 For instance consider telling copilot that you want a beatbook that looks at the following, if your aim is to generate a thematic beatbook that looks at how occurrences have changed over time:
-- Key field groups:
+- Key field groups: 
   - **Temporal:** names, season, year, is_weekend
   - **Content classification:** primary/secondary themes, incident type, severity
   - **Geographic:** location, location type
@@ -141,4 +141,4 @@ Other things you may include in refining the beatbook:
 ### 7) Expore other formats
 After you have generated a beatbook that's good enough, you may consider displaying it in a format different from just text.
 Assuming you generated a beatbook that looks at stories contained in the archives to show how things have changed with a newsroom's coverage over time, you can decided to reproduce this as a timeline even if you are not familiar with using [#timeline_tool]
-To convert a thematic beatbook into a timeline, you might need a final python script and you certainly need copilot. Write a prompt to copilot asking it to reformat your beatbook into a timeline. Or a mind map. Or a html page. When copilot is done, it presents your beatbook in a new format as a server and you see the pop up at the lower right side of your screen. Click on the pop up, or follow the same steps as we did when viewing Datasette in "PORTS."
+To convert a thematic beatbook into a timeline, you might need a final python script and you certainly need copilot. Write a prompt to copilot asking it to reformat your beatbook into a timeline. Or a mind map. Or a html page. When copilot is done, it presents your beatbook in a new format as a server and you see the pop up at the lower right side of your screen. Click on the pop up or follow the same steps as we did when viewing Datasette in "PORTS."
