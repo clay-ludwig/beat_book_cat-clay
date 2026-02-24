@@ -17,8 +17,7 @@
 - Create a GitHub repository
 - Open Codespace or local terminal in project folder
 - Install `uv`
-  - `curl -LsSf https://astral.sh/uv/install.sh | sh`
-  - `export PATH="$HOME/.local/bin:$PATH"`
+  - `pip install uv`
 - (Optional) Initialize project: `uv init --python 3.12`
 
 - Install LLM tooling and plugins
