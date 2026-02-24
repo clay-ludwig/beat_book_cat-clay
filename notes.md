@@ -35,9 +35,8 @@ Now you are ready to use open source models on your local computers.
 - The first step to taking our archives from json file to beatbook is to extract metadata. Metadata is simply data about the stories we have, and a reason why this step is crucial is: we do not want to dump all of our sensitive data into commercial models. We also want to reduce the number of tokens we use to generate our beatbook.
 - The open models we use for this task allow us use llms locally on our computers. So we are able to download the weights (or brains) of the models onto our devices and use them like we would use Word or Excel.
 (How to access their APIs?)
-
-To extract metadata, we will need a python script, and this is where our friend copilot comes in. Go into the copilot chat box and craft a prompt asking it to generate a Python script that extracts metadata from your original json file. Your prompt must be detailed, and put into perspective the kind of beatbook you'd like to create.
-For instance consider telling copilot that you want a beatbook that looks at the following, if your aim is to generate a thematic beatbook that looks at how occurrences have changed over time:
+- To extract metadata, we will need a python script, and this is where our friend copilot comes in. Go into the copilot chat box and craft a prompt asking it to generate a Python script that extracts metadata from your original json file. Your prompt must be detailed, and put into perspective the kind of beatbook you'd like to create.
+ For instance consider telling copilot that you want a beatbook that looks at the following, if your aim is to generate a thematic beatbook that looks at how occurrences have changed over time:
 - Key field groups: 
   - **Temporal:** names, season, year, is_weekend
   - **Content classification:** primary/secondary themes, incident type, severity
@@ -53,7 +52,7 @@ For a narrative beatbook
 # PRO TIP: When unsure about what prompts/directions to give your AI tool, ask AI!
 # [SAMPLE PROMPT: I'd like to generate metadata from articles that will help me create a beat book that looks at public safety issues thematically over time. For example, common issues that occur in the summer vs. the winter. What would the structure of that metadata need to look like?]
 
-Copilot generates the script and saves it in your directory in a file that will end in .p (since it is a python script). While the script will mostly not be easy to understand, being a Python script written in code, you need to look over it and read through the prompt contained in the script. These are more likely to be written in plalin text within the script. Check for things that might not align with your intial intention for the beatbook, a step you should not miss, given AI's affinity for halluciantions.
+Copilot generates the script and saves it in your directory in a file that will end in .py (since it is a python script). While the script will mostly not be easy to understand being a Python script written in code, you need to look over it and read through the prompt contained in the script. These are more likely to be written in plalin text within the script. Check for things that might not align with your intial intention for the beatbook, a step you should not miss, given AI's affinity for halluciantions.
 
 # Step 2
 Now that the script for the extraction is ready, run this command in the terminal to carry out the extraction:
