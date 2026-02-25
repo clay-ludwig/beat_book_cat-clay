@@ -83,6 +83,7 @@ Any of the models that show up should be fine to run the extraction with. So if 
 
 # Possible problems with extraction
 Although it sounds quite straight forward, many things can go wrong with extraction, and you should not be surprised if you run into errors while carrying out your extraction.
+
 One common reason why you might get an error with this process is rate limits. Rate limits are limits on how many API requests you can make at a given time to the AI model. So if you are working with hundreds of stories you are making hundreds of calls to the AI model. You are likely to run into limits at some point, escpecially if you are using free open source models.
 [Image of rate limits error]
 When you run into rate limits, the metadata already extracted can be lost.
