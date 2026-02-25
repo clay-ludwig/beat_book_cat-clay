@@ -111,19 +111,29 @@ To view your metadata in Datasette, first push your metadata into the tool using
 uv run sqlite-utils insert entities.db stories your_json_file_name --pk docref
 ```
 To view your document on datasette you first have to install it in your environment: 
+
 `uv add datasette`
-You know you added it correctly when your output says: "Installed 15 packages in 58ms" and goes ahead to list the packages installed.
+
+You can tell that you added it correctly when your output says: "Installed 15 packages in 58ms" and goes ahead to list the packages installed.
+
+[Add screenshot]
+
 Then you can run this to view your data in Datasette:
+
 `uv run datasette entities.db`
-What the command above does is take you to Datasette on you browser. Running this command prompts a pop up that asks you if you want to open datasette in a browser. If, somehow, you miss the pop up or close it, you can access datasette by clicking on 'PORTS' locted at the top of your terminal. You should look for Port 8001, and you know this is what you are looking for because in your terminal, the last line there says: Uvicorn running on http://127.0.0.1:8001
+
+What the command above does is: take you to Datasette on you browser. Running this command prompts a pop up that asks you if you want to open datasette in a browser. If, somehow, you miss the pop up or close it, you can access datasette by clicking on 'PORTS' locted at the top of your terminal. You should look for Port 8001, and you know this is what you are looking for because in your terminal, the last line there says: Uvicorn running on http://127.0.0.1:8001
+
 The last four figures there tells you what port to look for.
-CLick on the link. A globe icon pops up by the side. Click on that and look through your data. Your data is linked to "stories" under entities [we know this how?]
+CLick on the link. A globe icon pops up by the side. Click on that and look through your data. Your data is linked to "stories" under entities 
+
 Looking at your work in datasette lets you see how well your extraction worked. It also helps you with factchecking: are there false names in the extracted data? You are able to compare the extractions with the summary you have. You also get to see how many cases your llm failed to parse or extract your data, which gives a sense of how reliable the data is.
 
 - Use Datasette to:
   - Inspect extraction quality
   - Check false positives/failed parses
   - Compare extracted fields against summaries and actual stories.
+  
 Notice something off? Now is the time to repeat the metadata extraction process until metadata quality is acceptable.
 
 ### 6) Generate the Beatbook
