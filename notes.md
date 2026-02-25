@@ -22,8 +22,8 @@
 - Install `llm` and model plugins (Groq, Gemini, Anthropic, etc.)
   Plugins are tools you add into bigger apps that help perform new functions. Think Chrome extension and how it helps give Chrome extra features.
   - Run: `uv add llm install llm-groq` (Here, you can include other models in addition to groq: llm-gemini, llm-anthropic, especially if you have access to their API keys).
-  For this presentation, we'll work with groq.
-6. Get a Groq API key:
+  - For this presentation, we'll work with groq.
+- Get a Groq API key:
 	- Go to https://console.groq.com
 	- Create an account and an API key (click on Create API at the top right corner when you log in to Groq).
   - To set up your Groq API key which should help you access the models, run: uv run llm keys set groq. You'll be prompted to enter your API keys. Bear in mind that you wont see the key, but when you click 'enter/return' it should work.
@@ -32,17 +32,17 @@ Now you are ready to use open source models on your local computers.
 
 ### 3) First: Extract Metadata!
 # Step 1
-- The first step to taking our archives from json file to beatbook is to extract metadata. Metadata is simply data about the stories we have, and a reason why this step is crucial is: we do not want to dump all of our sensitive data into commercial models. We also want to reduce the number of tokens we use to generate our beatbook.
+- The first step to taking our archives from json file to beatbook is to extract metadata. Metadata is simply data about the stories we have. This step is crucial because: we do not want to dump all of our sensitive data into commercial models. We also want to reduce the number of tokens we use to generate our beatbook.
 - The open models we use for this task allow us use llms locally on our computers. So we are able to download the weights (or brains) of the models onto our devices and use them like we would use Word or Excel.
-(How to access their APIs?)
-- To extract metadata, we will need a python script, and this is where our friend copilot comes in. Go into the copilot chat box and craft a prompt asking it to generate a Python script that extracts metadata from your original json file. Your prompt must be detailed, and put into perspective the kind of beatbook you'd like to create.
- For instance consider telling copilot that you want a beatbook that looks at the following, if your aim is to generate a thematic beatbook that looks at how occurrences have changed over time:
+(Include how to access their APIs?)
+- To extract metadata, we need a python script, and this is where copilot comes in. Go into the copilot chat box by the right side of your screen, and craft a prompt asking it to generate a Python script that extracts metadata from your original json file. Your prompt must be detailed, and put into perspective the kind of beatbook you'd like to create.
+ For instance, consider prompting copilot to create a beatbook that looks at the following, if your aim is to generate a thematic beatbook that looks at how occurrences have changed over time:
 - Key field groups: 
   - **Temporal:** names, season, year, is_weekend
   - **Content classification:** primary/secondary themes, incident type, severity
   - **Geographic:** location, location type
-  - **Contextual:** incident time, weather, agencies, outcomes
-For a narrative beatbook
+  - **Contextual:** incident time, weather, agencies, outcomes.
+- For a narrative beatbook
 - Key field groups:
   - **People:** names,title
   - **Places:** Maryland, Talbot, St Michael's
